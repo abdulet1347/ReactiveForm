@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="loginWrap">
+        <div [formGroup]="form">
+            <label for="username">User name</label>
+            <input class="re_input" type="text" id="username" formControlName="username" autocomplete="off">
+            <div class="error" *ngIf="form.get('username').invalid">
+                <img class="errorImg" src="assets\se_insuffErrorImg.png" alt="">
+                User Name is invalid
+            </div>
+            <br>
+            <label for="password">Password</label>
+            <input id="password" class="re_input" formControlName="password" type="password" autocomplete="off">
+            <div class="error" *ngIf="form.get('password').invalid">
+                <img class="errorImg" src="assets\se_insuffErrorImg.png" alt="">
+                Password is invalid
+            </div>
+            <div class="center">
+                <button id="movableBtn" class="waves-effect waves-light btn SubmitBtn"
+                (mouseenter)="moveable()">SUBMIT</button>
+            </div>
+        </div>
+    </div>
+</div>
